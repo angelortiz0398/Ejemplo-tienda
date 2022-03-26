@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 feb 2022 12:31:33 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="tienda" name="entidades.Venta" optimistic-lock="none" table="venta">
+        <id name="idventa" type="int">
+            <column name="idventa"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="entidades.Persona" fetch="select" name="persona">
+            <column name="idcliente" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="entidades.Usuario" fetch="select" name="usuario">
+            <column name="idusuario" not-null="true"/>
+        </many-to-one>
+        <property name="tipoComprobante" type="string">
+            <column length="20" name="tipo_comprobante" not-null="true"/>
+        </property>
+        <property name="serieComprobante" type="string">
+            <column length="7" name="serie_comprobante"/>
+        </property>
+        <property name="numComprobante" type="string">
+            <column length="10" name="num_comprobante" not-null="true"/>
+        </property>
+        <property name="fechaHora" type="timestamp">
+            <column length="19" name="fecha_hora" not-null="true"/>
+        </property>
+        <property name="impuesto" type="big_decimal">
+            <column name="impuesto" not-null="true" precision="4"/>
+        </property>
+        <property name="total" type="big_decimal">
+            <column name="total" not-null="true" precision="11"/>
+        </property>
+        <property name="estado" type="string">
+            <column length="20" name="estado" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="detalleVentas" table="detalle_venta">
+            <key>
+                <column name="idventa" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.DetalleVenta"/>
+        </set>
+    </class>
+</hibernate-mapping>

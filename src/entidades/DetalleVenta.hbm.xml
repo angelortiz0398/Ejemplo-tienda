@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 feb 2022 12:31:33 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="tienda" name="entidades.DetalleVenta" optimistic-lock="none" table="detalle_venta">
+        <id name="iddetalleVenta" type="int">
+            <column name="iddetalle_venta"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="entidades.Articulo" fetch="select" name="articulo">
+            <column name="idarticulo" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="entidades.Venta" fetch="select" name="venta">
+            <column name="idventa" not-null="true"/>
+        </many-to-one>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true"/>
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" not-null="true" precision="11"/>
+        </property>
+        <property name="descuento" type="big_decimal">
+            <column name="descuento" not-null="true" precision="11"/>
+        </property>
+    </class>
+</hibernate-mapping>

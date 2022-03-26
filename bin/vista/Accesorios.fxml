@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane id="spltAccesorios" dividerPositions="0.2" maxWidth="800.0" nodeOrientation="LEFT_TO_RIGHT" stylesheets="@../stylesheet/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.AccesoriosController">
+   <items>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="683.0" prefWidth="150.0">
+               <children>
+                  <Label text="Categoria">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <CheckBox fx:id="cBolsa" mnemonicParsing="false" onAction="#soloBolsa" text="Bolsa">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="cGorra" mnemonicParsing="false" onAction="#soloGorra" text="Gorra">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="cMochila" mnemonicParsing="false" onAction="#soloMochila" text="Mochila">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="cMorral" mnemonicParsing="false" onAction="#soloMorral" text="Morral">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Label text="Genero">
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="cCaballero" mnemonicParsing="false" onAction="#soloCaballero" text="Caballero">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cDama" mnemonicParsing="false" onAction="#soloDama" text="Dama">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cNinio" mnemonicParsing="false" onAction="#soloNinio" text="Niño">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cNinia" mnemonicParsing="false" onAction="#soloNinia" text="Niña">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <Label text="Marca">
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="cAdidas" mnemonicParsing="false" onAction="#soloAdidas" text="Adidas">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cNike" mnemonicParsing="false" onAction="#soloNike" text="Nike">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cPuma" mnemonicParsing="false" onAction="#soloPuma" text="Puma">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cFlexi" mnemonicParsing="false" onAction="#soloFlexi" text="Flexi">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cKswiss" mnemonicParsing="false" onAction="#soloKswiss" text="K-Swiss">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cLevi" mnemonicParsing="false" onAction="#soloLevi" text="Levi">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cLotto" mnemonicParsing="false" onAction="#soloLotto" text="Lotto">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="cNatural" mnemonicParsing="false" onAction="#soloNatural" text="Natural">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <Label text="Precio">
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="c300" mnemonicParsing="false" onAction="#solo300" text="Hasta $300">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="c600" mnemonicParsing="false" onAction="#solo600" text="Entre $300 y $600">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="c900" mnemonicParsing="false" onAction="#solo900" text="Entre $600 y $900">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="c1000" mnemonicParsing="false" onAction="#solo1000" text="\$900 o superior">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Button fx:id="volver" mnemonicParsing="false" onAction="#presionaVolver" styleClass="fancy-button" text="Volver">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+      <ScrollPane maxHeight="1024.0" maxWidth="1200.0" pannable="true" prefHeight="700.0" prefWidth="600.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="865.0" prefWidth="657.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane alignment="CENTER" hgap="10.0" layoutX="38.0" layoutY="21.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="806.0" prefWidth="619.0" vgap="10.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="A31" fitHeight="110.0" fitWidth="150.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A1.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Mochila Puma ID-31" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                           <graphic>
+                              <Label text="\$ 479">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A32" fitHeight="120.0" fitWidth="150.0" onMouseClicked="#presionaA32" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A2.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Cangurera Puma ID-32" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 299">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A33" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA33" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A3.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Morral Adidas ID-33" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 399">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A34" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#presionaA34" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A4.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gorra Lotto ID-34" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 149">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A35" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA35" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A5.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gorra Under Armor ID-35" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 249">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A36" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA36" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A6.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Mochila Puma Rosa ID-36" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 599">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A37" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA37" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A7.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Mochila Puma Azul ID-37" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 599">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A38" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA38" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A8.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Cangurera Converse ID-38" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 289">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A39" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA39" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A9.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gorra Converse ID-39" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 399">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A40" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA40" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A10.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gorra K-Swiss ID-40" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 449">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A41" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA41" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A11.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Bolsa Holly Land ID-41" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 249">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A42" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA42" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A12.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Maleta Puma ID-42" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 999">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A43" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA43" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A13.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Morral Nike ID-43" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 499">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A44" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA44" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A14.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gorra Adidas ID-44" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 399">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <ImageView fx:id="A45" fitHeight="110.0" fitWidth="150.0" onMouseClicked="#presionaA45" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../imagenes/A15.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gorra Chivas ID-45" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <graphic>
+                              <Label text="\$ 500">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,15 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+	-fx-font-family: 'Paloseco-Light';
+	-fx-font-size: 14;
+	-fx-background-color: blanchedalmond;
+}
+
+.button {
+	-fx-background-color: firebrick;
+	-fx-text-fill: white;
+}
+.fancy-button:pressed{
+	-fx-background-color: white;
+	-fx-text-fill: firebrick;
+}

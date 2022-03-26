@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" stylesheets="@../stylesheet/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.PaginaUsuarioController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="292.0" prefWidth="146.0" style="-fx-background-color: linen;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="122.0" prefWidth="160.0" text="Gestor adminstrativo" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" />
+               </graphic>
+            </Label>
+            <Button fx:id="botonPedidos" alignment="CENTER" mnemonicParsing="false" onAction="#presionaPedidos" prefHeight="39.0" prefWidth="149.0" styleClass="fancy-button" text="Administrar pedidos" textOverrun="CENTER_ELLIPSIS" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonFacturas" mnemonicParsing="false" onAction="#presionaFacturas" prefHeight="27.0" prefWidth="172.0" styleClass="fancy-button" text="Gestor de facturas" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonVendedores" mnemonicParsing="false" onAction="#presionaVendedores" prefHeight="45.0" prefWidth="168.0" styleClass="fancy-button" text="Gestor de vendedores" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Datos" mnemonicParsing="false" onAction="#verDatos" prefHeight="25.0" prefWidth="201.0" styleClass="fancy-button" text="Datos de tu cuenta" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonActualizar" mnemonicParsing="false" onAction="#presionaActualizar" prefHeight="25.0" prefWidth="177.0" styleClass="fancy-button" text="Actualizar datos" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="volver" mnemonicParsing="false" onAction="#presionaVolver" styleClass="fancy-button" text="Volver" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></VBox>
+   </left>
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Separator maxWidth="1.7976931348623157E308" prefHeight="3.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5899999737739563" green="0.15584276616573334" blue="0.04129999876022339" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: papayawhip;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="privacidad" onMouseClicked="#presionaPrivacidad" text="Aviso de privacidad">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fontSmoothingType="LCD" glyphName="FILE" selectionFill="#d03939" size="20" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="terminos" onMouseClicked="#presionaTerminos" text="Términos y condiciones ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fontSmoothingType="LCD" glyphName="FAX" selectionFill="#d03939" size="20" />
+                     </graphic>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="299.0" prefWidth="500.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Lista de vendedores">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="LIST" />
+               </graphic>
+            </Label>
+            <Separator maxWidth="1.7976931348623157E308" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Separator>
+            <TableView fx:id="tabla" editable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="400.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="Email" prefWidth="130.0" text="Correo electronico" />
+                  <TableColumn fx:id="Password" prefWidth="75.0" text="Contraseña" />
+                  <TableColumn fx:id="Direccion" prefWidth="75.0" text="Direccion" />
+                  <TableColumn fx:id="Accion" prefWidth="75.0" text="Accion" />
+              </columns>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets left="10.0" right="10.0" />
+               </opaqueInsets>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TableView>
+            <Button fx:id="ActualizarBoton" mnemonicParsing="false" onAction="#presionaActualizarTabla" styleClass="fancy-button" text="Actualizar tabla" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

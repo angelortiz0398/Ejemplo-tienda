@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 feb 2022 12:31:33 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="tienda" name="entidades.Categoria" optimistic-lock="none" table="categoria">
+        <id name="idcategoria" type="java.lang.Integer">
+            <column name="idcategoria"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nombre" type="string">
+            <column length="50" name="nombre" not-null="true" unique="true"/>
+        </property>
+        <property name="descripcion" type="string">
+            <column length="256" name="descripcion"/>
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="estado"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="articulos" table="articulo">
+            <key>
+                <column name="idcategoria" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.Articulo"/>
+        </set>
+    </class>
+</hibernate-mapping>

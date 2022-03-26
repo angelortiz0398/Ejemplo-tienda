@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 feb 2022 12:31:33 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="tienda" name="entidades.Rol" optimistic-lock="none" table="rol">
+        <id name="idrol" type="int">
+            <column name="idrol"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="nombre" type="string">
+            <column length="30" name="nombre" not-null="true"/>
+        </property>
+        <property name="descripcion" type="string">
+            <column length="100" name="descripcion"/>
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="estado"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="usuarios" table="usuario">
+            <key>
+                <column name="idrol" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.Usuario"/>
+        </set>
+    </class>
+</hibernate-mapping>

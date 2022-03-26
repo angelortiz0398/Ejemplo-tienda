@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 feb 2022 12:31:33 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="tienda" name="entidades.Usuario" optimistic-lock="none" table="usuario">
+        <id name="idusuario" type="int">
+            <column name="idusuario"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="entidades.Rol" fetch="select" name="rol">
+            <column name="idrol" not-null="true"/>
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column length="100" name="nombre" not-null="true"/>
+        </property>
+        <property name="tipoDocumento" type="string">
+            <column length="20" name="tipo_documento"/>
+        </property>
+        <property name="numDocumento" type="string">
+            <column length="20" name="num_documento"/>
+        </property>
+        <property name="direccion" type="string">
+            <column length="70" name="direccion"/>
+        </property>
+        <property name="telefono" type="string">
+            <column length="20" name="telefono"/>
+        </property>
+        <property name="email" type="string">
+            <column length="50" name="email" not-null="true"/>
+        </property>
+        <property name="passwd" type="binary">
+            <column name="passwd" not-null="true"/>
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="estado"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="ventas" table="venta">
+            <key>
+                <column name="idusuario" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.Venta"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="ingresos" table="ingreso">
+            <key>
+                <column name="idusuario" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.Ingreso"/>
+        </set>
+    </class>
+</hibernate-mapping>

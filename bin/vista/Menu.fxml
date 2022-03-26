@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane focusTraversable="true" maxHeight="768.0" maxWidth="1360.0" minHeight="600.0" minWidth="800.0" prefHeight="700.0" prefWidth="1280.0" stylesheets="@../stylesheet/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.MenuController">
+   <top>
+      <Pane maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="23.0" fitWidth="40.0" layoutX="260.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/lupa3.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="campoBusqueda" layoutX="283.0" layoutY="25.0" prefHeight="25.0" prefWidth="238.0" promptText="Buscar ropa, zapatos, etc">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Button fx:id="buscarBoton" layoutX="521.0" layoutY="25.0" mnemonicParsing="false" onAction="#buscar" styleClass="fancy-button" text="Buscar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="sesionBoton" layoutX="838.0" layoutY="28.0" mnemonicParsing="false" onAction="#iniciarSesion" prefHeight="0.0" prefWidth="137.0" style="-fx-background-color: black;" styleClass="fancy-button" text="Iniciar sesion">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <MenuBar fx:id="menu" depthTest="ENABLE" layoutX="426.0" layoutY="61.0" onMouseClicked="#presionaMenu" prefHeight="30.0" prefWidth="545.0" style="-fx-background-color: transparent;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuBar>
+            <ImageView fx:id="sesionImagen" fitHeight="48.0" fitWidth="51.0" layoutX="991.0" layoutY="16.0" onMouseClicked="#presionaImageSesion" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/iconousuario.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <FontAwesomeIconView glyphName="OPENCART" layoutX="1062.0" layoutY="55.0" size="30">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIconView>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane maxHeight="-Infinity" prefHeight="500.0" prefWidth="160.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Pane maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: moccasin;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="341.0" layoutY="37.0" text="Contactenos " wrapText="true">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="facebook" cache="true" fitHeight="66.0" fitWidth="79.0" layoutX="543.0" layoutY="24.0" onMouseClicked="#presionaFacebook" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/facebookicon-vector-eps.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="instagram" fitHeight="66.0" fitWidth="79.0" layoutX="642.0" layoutY="24.0" onMouseClicked="#presionaInstagram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/ig.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="whatsapp" fitHeight="66.0" fitWidth="79.0" layoutX="734.0" layoutY="24.0" onMouseClicked="#presionaWhatsapp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/whatsapp-logo.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="youtube" fitHeight="66.0" fitWidth="79.0" layoutX="824.0" layoutY="24.0" onMouseClicked="#presionaYoutube" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/youtube-symbol-icon-vector.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+   </bottom>
+   <right>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="155.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollBar fx:id="scroll" layoutX="132.0" layoutY="-81.0" orientation="VERTICAL" prefHeight="658.0" prefWidth="14.0" visible="false" />
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <VBox focusTraversable="true" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image1" cache="true" cacheHint="QUALITY" depthTest="ENABLE" fitHeight="150.0" fitWidth="964.0" onMouseClicked="#onClickImage" pickOnBounds="true" VBox.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../imagenes/5655687.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <HBox maxWidth="973.0" minWidth="600.0" prefHeight="152.0" prefWidth="918.0" style="-fx-background-color: linen; -fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="image2" blendMode="DARKEN" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#presionaImage2" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../imagenes/lacoste.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="image3" blendMode="DARKEN" cache="true" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#presionaImage3" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../imagenes/puma.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="image4" blendMode="DARKEN" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#presionaImage4" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../imagenes/adidasextra.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="image5" blendMode="DARKEN" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#presionaImage5" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../imagenes/adidas.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="image6" blendMode="DARKEN" fitHeight="150.0" fitWidth="215.0" onMouseClicked="#presionaImage6" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../imagenes/adidascasual.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ImageView fx:id="image7" blendMode="DARKEN" cache="true" cacheHint="QUALITY" depthTest="ENABLE" fitHeight="150.0" fitWidth="963.0" focusTraversable="true" nodeOrientation="INHERIT" onMouseClicked="#presionaImage7" pickOnBounds="true" VBox.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../imagenes/banner.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Pagination fx:id="pagina" blendMode="LIGHTEN" cacheHint="QUALITY" cacheShape="false" centerShape="false" focusTraversable="false" maxPageIndicatorCount="5" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#presionarPagina" pageCount="5" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pagination>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

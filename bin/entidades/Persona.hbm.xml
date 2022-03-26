@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 feb 2022 12:31:33 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="tienda" name="entidades.Persona" optimistic-lock="none" table="persona">
+        <id name="idpersona" type="int">
+            <column name="idpersona"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="tipoPersona" type="string">
+            <column length="20" name="tipo_persona" not-null="true"/>
+        </property>
+        <property name="nombre" type="string">
+            <column length="100" name="nombre" not-null="true"/>
+        </property>
+        <property name="tipoDocumento" type="string">
+            <column length="20" name="tipo_documento"/>
+        </property>
+        <property name="numDocumento" type="string">
+            <column length="20" name="num_documento"/>
+        </property>
+        <property name="direccion" type="string">
+            <column length="70" name="direccion"/>
+        </property>
+        <property name="telefono" type="string">
+            <column length="20" name="telefono"/>
+        </property>
+        <property name="email" type="string">
+            <column length="50" name="email"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="ventas" table="venta">
+            <key>
+                <column name="idcliente" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.Venta"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="ingresos" table="ingreso">
+            <key>
+                <column name="idproveedor" not-null="true"/>
+            </key>
+            <one-to-many class="entidades.Ingreso"/>
+        </set>
+    </class>
+</hibernate-mapping>
